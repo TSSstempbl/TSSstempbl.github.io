@@ -1,0 +1,186 @@
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="en_US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Atoms and Models</title>
+</head>
+<body>
+  <h1>Atoms and Models</h1>
+  <div class="question">
+    <p>1.  Which atomic model is the Bohr Model?</p>
+    <label>
+      <input type="radio" name="answers[1]" value="A">
+      <img src="https://goo.gl/dFaA4k" width="100" height="100">
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[1]" value="B" data-correct>
+      <img src="https://goo.gl/pnq835" width="100" height="100">
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[1]" value="C">
+      <img src="https://goo.gl/8tNMGo" width="100" height="100">
+    </label>
+  </div>
+  
+  <div class="question">
+    <p>2. Which atomic model is the quantum mechanical model?</p>
+    <label>
+      <input type="radio" name="answers[2]" value="A" data-correct>
+      <img src="https://goo.gl/8tNMGo" width="100" height="100">
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[2]" value="B">
+      <img src="https://goo.gl/KdxnvA" width="100" height="100">
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[2]" value="C">
+      <img src="https://goo.gl/dFaA4k" width="100" height="100">
+    </label>
+  </div>
+  
+  <div class="question">
+    <p>3. Which elemet has the highest electronegativity?</p>
+    <label>
+      <input type="radio" name="answers[3]" value="A" data-correct>
+      F
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[3]" value="B">
+      Se
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[3]" value="C">
+      Br
+    </label>
+  </div>
+
+  <div class="question">
+    <p>4. Which element has the highest ionization energy?</p>
+    <label>
+      <input type="radio" name="answers[4]" value="A">
+      H
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[4]" value="B">
+      Ds
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[4]" value="C" data-correct>
+      He
+    </label>
+  </div>
+ 
+  <div class="question">
+    <p>5. Which chemical symbol is that of a compound?</p>
+    <label>
+      <input type="radio" name="answers[5]" value="A" data-correct>
+      NaCl
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[5]" value="B">
+      (H2O)(KCN)
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[5]" value="C">
+      Es
+    </label>
+  </div>
+  
+  <div class="question">
+    <p>6. Which checmical symbol is that of a mixture?</p>
+    <label>
+      <input type="radio" name="answers[6]" value="A">
+      H
+    </label>
+    
+    <label>
+      <input type="radio" name="answers[6]" value="B">
+      KCN
+    </label>
+    <label>
+      <input type="radio" name="answers[6]" value="C" data-correct>
+      (H2O)(NaCl)
+    </label>
+  </div>
+  <button id="quiz-submit">Submit</button>
+  
+  <div>
+    Score: <span id="score">0</span>
+  </div>
+  
+  <style>
+    h1 {
+      background: lightblue;
+      font-family: "Courier New";
+    }
+    body {
+  background: lightblue;
+  font-size: 18px;
+  font-family: "Courier New";
+}
+.question {
+  padding: 20px;
+  background: #9298ab;
+  margin-bottom: -10px;
+}
+.quiz-msg {
+  padding: 8px;
+  margin-top: 16px;
+}
+.quiz-msg.correct {
+  background: #66db79;
+}
+.quiz-msg.incorrect {
+  background: #bd3838;
+  padding: 3px;
+}
+.correct {
+background: #66db79;
+padding: 3px;
+}
+  </style>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('#quiz-submit').on('click', function(){
+       var score = 0;
+    $('.question').each(function(){
+      $('.quiz-msg', this).remove();
+      
+      var correct = $(this).find(':checked[data-correct]').length;
+      
+      if( correct == 1){
+        score++;
+        var msgHTML = '<div class="quiz-msg correct">Correct!</div>';
+        $(this).append(msgHTML);
+      }else{
+        var alrtHTML = '<div class="quiz-msg incorrect">Incorrect!</div>';
+        $(this).append(alrtHTML);
+      }
+      
+    });
+    
+    $('#score').text(score);
+    
+    
+  });
+  
+}); 
+  </script>
+</body>
+</html>
+>>>>>>> fdffc2ecf40f70c47b4fcfed5bffe29be723d587
