@@ -1,186 +1,104 @@
-<<<<<<< HEAD
-=======
-<!DOCTYPE html>
-<html lang="en_US">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Atoms and Models</title>
-</head>
-<body>
-  <h1>Atoms and Models</h1>
-  <div class="question">
-    <p>1.  Which atomic model is the Bohr Model?</p>
-    <label>
-      <input type="radio" name="answers[1]" value="A">
-      <img src="https://goo.gl/dFaA4k" width="100" height="100">
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[1]" value="B" data-correct>
-      <img src="https://goo.gl/pnq835" width="100" height="100">
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[1]" value="C">
-      <img src="https://goo.gl/8tNMGo" width="100" height="100">
-    </label>
-  </div>
-  
-  <div class="question">
-    <p>2. Which atomic model is the quantum mechanical model?</p>
-    <label>
-      <input type="radio" name="answers[2]" value="A" data-correct>
-      <img src="https://goo.gl/8tNMGo" width="100" height="100">
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[2]" value="B">
-      <img src="https://goo.gl/KdxnvA" width="100" height="100">
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[2]" value="C">
-      <img src="https://goo.gl/dFaA4k" width="100" height="100">
-    </label>
-  </div>
-  
-  <div class="question">
-    <p>3. Which elemet has the highest electronegativity?</p>
-    <label>
-      <input type="radio" name="answers[3]" value="A" data-correct>
-      F
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[3]" value="B">
-      Se
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[3]" value="C">
-      Br
-    </label>
-  </div>
+ <h2>  STEM Chemistry Content Quiz </h2>        
+          
+           <p class="question">1. What important concept was discovered in Ernest Rutherford's Gold Foil experiment?</p>
 
-  <div class="question">
-    <p>4. Which element has the highest ionization energy?</p>
-    <label>
-      <input type="radio" name="answers[4]" value="A">
-      H
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[4]" value="B">
-      Ds
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[4]" value="C" data-correct>
-      He
-    </label>
-  </div>
- 
-  <div class="question">
-    <p>5. Which chemical symbol is that of a compound?</p>
-    <label>
-      <input type="radio" name="answers[5]" value="A" data-correct>
-      NaCl
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[5]" value="B">
-      (H2O)(KCN)
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[5]" value="C">
-      Es
-    </label>
-  </div>
-  
-  <div class="question">
-    <p>6. Which checmical symbol is that of a mixture?</p>
-    <label>
-      <input type="radio" name="answers[6]" value="A">
-      H
-    </label>
-    
-    <label>
-      <input type="radio" name="answers[6]" value="B">
-      KCN
-    </label>
-    <label>
-      <input type="radio" name="answers[6]" value="C" data-correct>
-      (H2O)(NaCl)
-    </label>
-  </div>
-  <button id="quiz-submit">Submit</button>
-  
-  <div>
-    Score: <span id="score">0</span>
-  </div>
-  
-  <style>
-    h1 {
-      background: lightblue;
-      font-family: "Courier New";
-    }
-    body {
-  background: lightblue;
-  font-size: 18px;
-  font-family: "Courier New";
-}
-.question {
-  padding: 20px;
-  background: #9298ab;
-  margin-bottom: -10px;
-}
-.quiz-msg {
-  padding: 8px;
-  margin-top: 16px;
-}
-.quiz-msg.correct {
-  background: #66db79;
-}
-.quiz-msg.incorrect {
-  background: #bd3838;
-  padding: 3px;
-}
-.correct {
-background: #66db79;
-padding: 3px;
-}
-  </style>
-  
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    $('#quiz-submit').on('click', function(){
-       var score = 0;
-    $('.question').each(function(){
-      $('.quiz-msg', this).remove();
-      
-      var correct = $(this).find(':checked[data-correct]').length;
-      
-      if( correct == 1){
-        score++;
-        var msgHTML = '<div class="quiz-msg correct">Correct!</div>';
-        $(this).append(msgHTML);
-      }else{
-        var alrtHTML = '<div class="quiz-msg incorrect">Incorrect!</div>';
-        $(this).append(alrtHTML);
-      }
-      
-    });
-    
-    $('#score').text(score);
-    
-    
-  });
-  
-}); 
-  </script>
-</body>
-</html>
->>>>>>> fdffc2ecf40f70c47b4fcfed5bffe29be723d587
+	    	<ul>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1">Atoms are made up of empty space</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Particles are incapable of going through an atom</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>There is a nucleus at the center of an atom, and it is positively charged</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>There is a nucleus at the center of an atom, and it is negatively charged</label>
+    		</ul>
+	  	</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">2. What is the standard atom model used by scientist today?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Bohr model</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="1">
+	        <label id="correctString2">Thompson model</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Rutherford model</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Cathode Ray tube</label>
+	    	</ul>
+	  	</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">3. Which element has the lowest electronegativity?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Flourine</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="1">
+	        <label id="correctString3">Beryllium</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Hydrogen</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Francium</label>
+	    	</ul>
+		</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">4. Which side of the periodic table is classified as Alkaline medals? </p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Left</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="1">
+	        <label id="correctString4">Middle</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Right</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Bottom</label>
+    		</ul>
+    	<p class="question">5. Which of the following correctly states what compounds and mixtures have in common?</p>
+
+	    	<ul>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1">Substances that are both compounds and mixtures are not chemically combined</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Both compounds and mixtures are easy to seperate</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Both compounds and mixtures keep the characteristics of its properties</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>None of the above</label>
+    		</ul>
+	  	</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">6. What type of mixture is uniformly mixed?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Homogeneous</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="1">
+	        <label id="correctString2">Heterogeneous</label>
+	        
